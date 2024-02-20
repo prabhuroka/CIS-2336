@@ -1,0 +1,178 @@
+<html>
+<head>
+    <title>Week-6</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Week-6 Code 01: Comparison operator</h1>
+    <p id="p01">HELLO WORLD</p>
+    <p id="p02"></p>
+    <p id="p03"></p>
+    
+    <script>
+        let a=5, b=10, c="5";
+        document.write("The value of a = "+a);
+        document.write("<br>The value of b = "+b);
+        document.write("<br>The value of c = "+c);
+        //show the result at p01
+        document.getElementById("p01").innerHTML = (a==c);
+        document.getElementById("p02").innerHTML = (a===c);
+        document.getElementById("p03").innerHTML = (a<b);
+    </script>
+</body>
+</html>
+<!--CODE 2-->
+<html>
+<head>
+    <style>
+        h1{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 06 Code 02: Conditional statement</h1>
+    <script>
+        let d= 15;
+        //check the value by conditions
+        if (d>2){
+            document.write("Good Afternoon");
+        }
+        else{
+            document.write("Good Morning");
+        }
+    </script>
+</body>
+</html>
+<!--Code 3-->
+<html>
+<head>
+</head>
+<body>
+    
+</body>
+<script>
+    var ArrayName = ["Sajida","Sam","Sunny","John"];
+    document.write("THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    document.write("<br> My array length is = "+ ArrayName.length);
+    document.write("<br> My array element at 3rd position is = "+ ArrayName[2]);
+    //Add element in array
+    ArrayName.push("Ray");
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    ArrayName.push("Rock");
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    ArrayName.push("Roy");
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    //Delete last element
+    ArrayName.pop();
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    //Delete First Element
+    ArrayName.shift();
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+    //Delete element by index
+    ArrayName.splice(1,2);
+    document.write("<br>THIS IS MY ARRAY LIST ITEM"+ ArrayName);
+</script>
+</html>
+
+<!--Code 04-->
+<html>
+<head>
+    <style>
+        #b01{
+            background-image: url(plus.png);
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+        }
+        #b02{
+            background-image: url(minus.png);
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+        }
+        #b03{
+            background-image: url(multiply.png);
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+
+        }
+        #b04{
+            background-image: url(divide.png);
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 06 Javascript function</h1>
+    Number 01 <input type="text" id="num1"><br><br>
+    Number 02 <input type="text" id="num2"><br><br>
+    <input type="button" id="b01" onclick="addby()">
+    <input type="button" id="b02" onclick="substractby()">
+    <input type="button" id="b03" onclick="multiplyby()">
+    <input type="button" id="b04" onclick="divideby()">
+    <p>The result is:<span id="result"></span></p>
+    <script>
+        function addby(){
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (+n1)+(+n2);
+        }
+        function substractby(){
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (+n1)-(+n2);
+        }
+        function multiplyby(){
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (+n1)*(+n2);
+        }
+        function divideby(){
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (+n1)/(+n2);
+        }
+    </script>
+
+</body>
+</html>
+<!--Code 05-->
+<html>
+<head>
+</head>
+<body>
+    <h1>Week06 code5: Javascript Object</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+<script>
+    var student = {
+        fname:"Prabhu",
+        lname:"Roka"}
+    //first method
+    document.getElementById("demo").innerHTML="First Method="+student.fname+" "+student.lname;
+    //second method
+    document.getElementById("demo1").innerHtML="Second Method= "+student["fname"] + " " + student["lname"];
+</script>
+</body>
+</html>
+
+<!--Code 06-->
+<html>
+<head>
+</head>
+<body>
+    <h1>Week 06: functions with parameters</h1>
+</body>
+<p id="demo2"></p>
+<script>
+    function myfunction(x,y){
+        return x+y;
+    }
+    document.getElementById("demo2").innerHTML= myfunction(2,3)
+</script>
+</html>
